@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetoPokemon</title>
+    <link rel="shortcut icon" href="./imagenes/favicon-32x32.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pokemon.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./imagenes/International_Pokemon_logo.svg.png" alt="">
+        </div>
+        <div class="pokemon-container">
+            <img src="./imagenes/Eevee-removebg-preview.png" alt="imagen Eevee">
+            <img src="./imagenes/Pikachu-removebg-preview.png" alt="imagen Pikachu">
+            <img src="./imagenes/Bulbasaur-removebg-preview.png" alt="imagen Bulbasaur">
+            <img src="./imagenes/gratis-png-pokemon-charmander-pokemon-go-pikachu-ash-ketchum-charmander-pokemon-removebg-preview.png" alt="imagen Charmander">
+            <img src="./imagenes/007-removebg-preview.png" alt="imagen Squirtle">
+        </div>
+    </header>
+    <main class="flex">
+    <form id="pokemonForm">
+        <label for="pokemonName">Encuentra tu Pokémon:</label>
+        <input type="text" id="pokemonName" placeholder="Nombre del Pokémon">
+        <button type="button" onclick="buscarPokemon()">Buscar</button>
+    </form>
+</main>
+    <template id="template-card">
+        <article class="card">
+            <img src="./imagenes/bg-pattern-card.svg" alt="" class="card-header">
+            <div class="card-body">
+                <img src="" alt="" class="card-body-img">
+                <h1 class="card-body-title">
+                        <span></span>
+                    </h1>
+                    <p class="card-body-text"></p>
+                </div>
+                <div class="card-footer">
+                    <div class="card-footer-social">
+                        <h3></h3>
+                        <p>Ataque</p>
+                    </div>
+                    <div class="card-footer-social">
+                        <h3></h3>
+                        <p>Especial</p>
+                    </div>
+                    <div class="card-footer-social">
+                        <h3></h3>
+                        <p>Defensa</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <script src="./pokemon.js"></script>
+</body>
+</html>
