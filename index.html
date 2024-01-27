@@ -24,40 +24,49 @@
             <img src="./imagenes/007-removebg-preview.png" alt="imagen Squirtle">
         </div>
     </header>
-    <main class="flex">
-    <form id="pokemonForm">
+    <div class="form-container">
         <label for="pokemonName">Encuentra tu Pokémon:</label>
-        <input type="text" id="pokemonName" placeholder="Nombre del Pokémon">
-        <button type="button" onclick="buscarPokemon()">Buscar</button>
-    </form>
-</main>
-    <template id="template-card">
-        <article class="card">
-            <img src="./imagenes/bg-pattern-card.svg" alt="" class="card-header">
-            <div class="card-body">
-                <img src="" alt="" class="card-body-img">
-                <h1 class="card-body-title">
-                        <span></span>
-                    </h1>
-                    <p class="card-body-text"></p>
-                </div>
-                <div class="card-footer">
-                    <div class="card-footer-social">
-                        <h3></h3>
-                        <p>Ataque</p>
+        <form id="pokemonForm1">
+            <input type="text" id="pokemonName" placeholder="Nombre del Pokémon">
+            <button type="button" onclick="buscarPokemonName()">Buscar</button>
+        </form>
+        <form id="pokemonForm2">
+            <input type="text" id="pokemonId" placeholder="Número de Pokémon">
+            <button type="button" onclick="buscarPokemonId()">Buscar</button>
+        </form>
+
+    </div>  
+    <main class="flex">
+   
+            <template id="template-card">
+                <article class="card">
+                    <img src="./imagenes/bg-pattern-card.svg" alt="" class="card-header">
+                    <div class="card-body">
+                        <img src="" alt="" class="card-body-img">
+                        <h1 class="card-body-title">
+                            <span></span>
+                        </h1>
+                            <p class="card-body-text"></p>
                     </div>
-                    <div class="card-footer-social">
-                        <h3></h3>
-                        <p>Especial</p>
+                    <div class="card-footer">
+                        <div class="card-footer-social">
+                            <h3></h3>
+                            <p>Ataque</p>
+                        </div>
+                        <div class="card-footer-social">
+                            <h3></h3>
+                            <p>Especial</p>
+                        </div>
+                        <div class="card-footer-social">
+                            <h3></h3>
+                            <p>Defensa</p>
+                        </div>
                     </div>
-                    <div class="card-footer-social">
-                        <h3></h3>
-                        <p>Defensa</p>
                     </div>
-                </div>
-            </div>
-        </article>
-    </template>
+                </article>
+            </template>
+    </main>
+
 
     <script src="./pokemon.js"></script>
 </body>

@@ -48,7 +48,7 @@ const pintarCard = (pokemon) => {
     flex.appendChild(fragment);
 }
 
-const buscarPokemon = async () => {
+const buscarPokemonName = async () => {
     const inputPokemon = document.getElementById('pokemonName');
     const pokemonName = inputPokemon.value.toLowerCase();
 
@@ -71,4 +71,40 @@ const buscarPokemon = async () => {
         alert('¡No se encontró un Pokémon con ese nombre!');
     }
 }
+
+const buscarPokemonId = async () => {
+    const inputId = document.getElementById('pokemonId');
+    const idValue = parseInt(inputId.value);
+
+    if (isNaN(idValue) || idValue <=0){
+        alert('Indique un id válido');
+        return;
+    }
+    try{
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${idValue}`);
+
+        const data = await res.json();
+
+        if (data.id === undefined){
+            alert('No hay ningún Pokémon con ese Id');
+            return;
+        }
+
+        const pokemon = {
+            img: data.sprites.other.dream_world.front_default,
+            nombre: data.name,
+            hp: data.stats[0].base_stat,
+            experiencia: data.base_experience,
+            ataque: data.stats[1].base_stat,
+            especial: data.stats[3].base_stat,
+            defensa: data.stats[2].base_stat,
+        }
+        pintarCard(pokemon);
+    }catch (error){
+        console.log(error);
+        alert('Hubo algún problema al buscar al Pokémon');
+    }
+}
+
+
 
