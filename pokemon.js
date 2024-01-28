@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const random = getRandomInt(1, 151)
-    fetchData(random);
-});
-
 const getRandomInt = (min,max) => {
     return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -105,5 +100,3 @@ const buscarPokemonId = async () => {
         alert('Hubo algún problema al buscar al Pokémon');
     }
 }
-
-
